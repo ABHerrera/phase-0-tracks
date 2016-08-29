@@ -13,3 +13,5 @@ A commit is a save point. This save point allows for the developer to go back to
 
 * What is a merge conflict?
 A merge conflict is when two files changed the same thing and the master can't tell which file it is supposed to merge. 
+
+:) 
