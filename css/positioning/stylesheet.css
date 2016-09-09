@@ -1,0 +1,24 @@
+
+
+#img1 {
+    position: relative;
+    left: 45%;
+    top: 162px;
+}
+
+
+
+#img2 {
+    position: relative;
+    left: 31%;
+    top: 80px;
+}
+
+
+#img3 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: -1
+
+}
