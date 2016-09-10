@@ -1,3 +1,8 @@
+body {
+  margin: auto;
+  max-width: 960px;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -13,6 +18,44 @@ cite {
   list-style-type: none;
   padding-left: 0px;
 }
+
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 20px;
+  min-width: 150px;
+}
+
+main {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  blockquote {
+    padding: 0px 0px 0px 5px;
+    margin-right: 0px;
+    border-left: 2px solid blue;
+  }
+}
+
+/*
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+*/
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
