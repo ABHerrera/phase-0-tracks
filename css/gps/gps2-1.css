@@ -1,0 +1,38 @@
+header h1 {
+  font-family: georgia;
+  text-decoration: underline;
+}
+
+.column-1 h2 {
+  color: pink;
+}
+
+a:hover {
+  color:yellow;
+}
+
+
+header, footer {
+  background-color: orange;
+}
+
+h1, h2 {
+    font-family: georgia;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.column-1 {
+  background-color: lightblue;
+  display: inline-block;
+  width: 48%;
+}
+
+.column-2 {
+  background-color: lightgreen;
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
