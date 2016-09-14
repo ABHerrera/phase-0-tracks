@@ -1,0 +1,67 @@
+# Algorithm to Use an Elevator 
+# RELEASE 0: Equip Your New Robot
+
+# Locate the elevator
+	# Locate the elevator 
+	# Locate the button with an up arrow on it
+	# Press the button with the up arrow on it
+
+# Get in the elevator
+	# Let the elevator doors open
+	# If people are in the elevator wait for them to get off then get in
+	# If no one gets off the elevator you can just get in the elevator 
+
+# Press the 10th floor button
+	# When you are in the elevator locate the panel of buttons
+	# If the button is not already pressed press the 10 to go to the 10th floor
+	# If the button 10 for the 10th floor is pressed already do nothing 
+
+# Get off the elevator
+	# If the doors to the elevator opens and the floor number says 10 then get off the elevator 
+	# If the doors to the elevator opens and the floor number does not say 10 then do not get off the elevator
+
+
+# RELEASE 1: Find a Real-Life Algorithm
+# Task: Blow Dry Wet Hair
+
+# Check if hair is wet
+	# If hair is dry don't do anything
+	# If hair is wet get blow dryer
+
+# Get Blow dryer
+	# Enter bathroom
+	# Locate sink
+	# Open cabinet under sink
+	# Take out blow dryer
+	# Close cabinet 
+
+# Place blow dryer for use
+	# Plug in blow dryer
+	# Place blow dryer on counter
+
+# Locate brush
+	# Open drawer and look for brush
+	# If brush is in the drawer take it out and close drawer
+	# If brush is not in drawer close drawer and look for brush on counter
+
+# Take brush and detangle hair
+	# Run brush through sections of hair until all hair has been brushed
+	# Put brush down
+
+# Blow dry hair
+	# Pickup blow dryer
+	# Turn on blow dryer
+	# Point blow dryer at hair
+	# Use hot air in blow dryer to dry hair on head
+	# Continually use hot air from blow dryer until all hair on head is dry
+
+# Put away blow dryer
+	# Turn off blow dryer
+	# Unplug blow dryer
+	# Open cabinet under the sink
+	# Put blow dryer away
+	# Close cabinet under the sink 
+
+
+
+
