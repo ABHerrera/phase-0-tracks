@@ -1,7 +1,11 @@
+
+
 # Ask name
 
 puts "What is your name?"
 name = gets.chomp 
+
+
 
 # Ask how hold are you?
 
@@ -52,6 +56,24 @@ if gets_insurance == 'y'
 else
 	gets_insurance = false
 end
+
+
+if age_check && likes_garlic_bread && gets_insurance
+	puts "Probably NOT a vamprire."
+elsif age_check && likes_garlic_bread || gets_insurance
+	puts "Probably a vampire."
+elsif 
+	puts "Absolutely a vampire."
+end
+
+
+
+# If all conditions are true
+	# but the user's name is 'Drake Cula' 
+	# or the user's name is 'Tu Fang' 
+	# then output overrides program and is 'Definitely a Vampire'
+
+
 
 
 
