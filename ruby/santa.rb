@@ -29,17 +29,30 @@ class Santa
 		cookie_type
 	end
 
-	def initialize
+	def reindeer_ranking
+		reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		puts "The prefered order of reindeer is #{reindeer_array}."
+	end
+
+	def age(integer)
+		@integer = 0
+		puts "Santa is #{@integer}'s old."
+	end
+
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
+		@gender = gender 
+		@ethnicity = ethnicity
+		puts "Santa is #{@gender} and #{@ethnicity}."
 	end
 end
 
-Christmas = Santa.new
+#Christmas = Santa.new
 
-Christmas.speak
-puts "What type of cookie should Santa eat?"
-cookie_type = gets.chomp
-Christmas.Eat_milk_and_cookies(cookie_type)
+# Christmas.speak
+# puts "What type of cookie should Santa eat?"
+# cookie_type = gets.chomp
+# Christmas.Eat_milk_and_cookies(cookie_type)
 
 
 
@@ -51,11 +64,11 @@ Christmas.Eat_milk_and_cookies(cookie_type)
 # age, which is not passed in on initialization and defaults to 0
 
 
-# santas = []
-# santas << Santa.new("agender", "black")
-# santas << Santa.new("female", "Latino")
-# santas << Santa.new("bigender", "white")
-# santas << Santa.new("male", "Japanese")
-# santas << Santa.new("female", "prefer not to say")
-# santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-# santas << Santa.new("N/A", "N/A")
+santas = []
+santas << Santa.new("agender", "black")
+santas << Santa.new("female", "Latino")
+santas << Santa.new("bigender", "white")
+santas << Santa.new("male", "Japanese")
+santas << Santa.new("female", "prefer not to say")
+santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+santas << Santa.new("N/A", "N/A")
