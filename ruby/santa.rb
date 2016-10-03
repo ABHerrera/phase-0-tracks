@@ -1,10 +1,3 @@
-# Santa Class
-# Three instance methods
-# 1.) Speak method that prints "Ho, ho, ho! Haaaappy holidays!"
-# 2.) Eat milk and cookies method that method that takes a cookie type 
-#    (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
-# 3.) Initialize method that prints "Initializing Santa instance ...".
-
 class Santa
 	attr_reader :gender, :ethnicity
 	attr_accessor :age
@@ -51,10 +44,7 @@ class Santa
 		reindeer_array.insert(-1, reindeer_name)
 		puts "Santa is mad the new reindeer order is #{reindeer_array}."
 	end
-
-
 end
-
 
 i = [ ]
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trans gender"]
@@ -69,13 +59,6 @@ i.age(12)
 i.celebrate_birthday
 i.random_age
 end
-
-
-
-
-###
-
-
 
 # i.each do |call|
 #     call.eat_milk_and_cookies("sugar")
@@ -94,6 +77,13 @@ end
 	# def ethnicity
 	# 	@ethnicity
 	# end
+
+# Santa Class
+# Three instance methods
+# 1.) Speak method that prints "Ho, ho, ho! Haaaappy holidays!"
+# 2.) Eat milk and cookies method that method that takes a cookie type 
+#    (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
+# 3.) Initialize method that prints "Initializing Santa instance ...".
 
 # # DRIVER CODE 1
 # Christmas = Santa.new
@@ -149,5 +139,3 @@ end
 # christmas.age(12)
 # christmas.celebrate_birthday
 # christmas.get_mad_at("Vixen")
-
-
