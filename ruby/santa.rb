@@ -7,10 +7,7 @@
 
 class Santa
 	attr_reader :gender, :ethnicity
-
-	# def reindeer_ranking
-	# 	ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-	# end
+	attr_accessor :age
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -31,7 +28,6 @@ class Santa
 		puts "Santa is #{@age} years old."
 	end
 
-
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
 		@gender = gender 
@@ -44,29 +40,44 @@ class Santa
 		puts "Santa is now #{celebrate_birthday}."
 	end 
 
-	# def get_mad_at(reindeer_name)
-	# 	@reindeer_name = reindeer_name
-	# 	reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-	# 	reindeer_array.first.shift.last
-	# end
+	def random_age
+		@age = rand(0..40)
+		puts "Santa is now #{@age}."
+	end
+
+	def get_mad_at(reindeer_name)
+		@reindeer_name = reindeer_name
+		reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		mad_array = reindeer_array.insert(-1, reindeer_name)
+		puts "Santa is made the new order is #{mad_array}."
+	end
 
 
 end
 
-# .sample = rancdom 
 
-
-new_santas = [ ]
+i = [ ]
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trans gender"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Hobbit"]
-40.times do |i|
-    i = Santa.new(example_genders.sample, example_ethnicities.sample)
+10.times do |i|
+    i = Santa.new(example_genders.sample, example_ethnicities.sample)   
+i.eat_milk_and_cookies("sugar")
+i.speak
+i.reindeer_ranking
+i.get_mad_at("Vixen")
+i.age(12)
+i.celebrate_birthday
+i.random_age
 end
 
 
 
 
-# new_santas.each do |call|
+
+
+
+
+# i.each do |call|
 #     call.eat_milk_and_cookies("sugar")
 #     call.reindeer_ranking
 #     call.age(12)
@@ -137,11 +148,9 @@ end
 # christmas.eat_milk_and_cookies("sugar")
 # christmas.speak
 # christmas.reindeer_ranking
+# christmas.get_mad_at("Vixen")
 # christmas.age(12)
 # christmas.celebrate_birthday
 # christmas.get_mad_at("Vixen")
-
-
-
 
 
