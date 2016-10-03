@@ -1,18 +1,26 @@
 class TodoList
 
-	def intialize
-		@dothedishes
-		@mowthelawn
-	end 
+	def initialize(list)
+		@list = list
+	end
 
+	def get_items
+		@list
+	end
+
+	def add_item(item)
+		@list.push(item)
+	end
+
+	def delete_item(item)
+		@list.delete(item)
+	end
+
+	def get_item(index_number)
+		@list[index_number]
+	end
 end
 
-list = TodoList.new
 
 
 
-
-  # it "adds an item to the list" do
-  #   list.add_item("mop")
-  #   expect(list.get_items).to eq ["do the dishes", "mow the lawn", "mop"]
-  # end
