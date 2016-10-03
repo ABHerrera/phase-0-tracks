@@ -6,6 +6,7 @@
 # 3.) Initialize method that prints "Initializing Santa instance ...".
 
 class Santa
+	attr_reader :gender, :ethnicity
 
 	# def reindeer_ranking
 	# 	ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -43,11 +44,6 @@ class Santa
 		puts "Santa is now #{celebrate_birthday}."
 	end 
 
-
-
-
-
-
 	# def get_mad_at(reindeer_name)
 	# 	@reindeer_name = reindeer_name
 	# 	reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -55,19 +51,41 @@ class Santa
 	# end
 
 
-# getter methods making public data outside the class
-
-	def gender
-		@gender 
-	end
-	
-
-	def ethnicity
-		@ethnicity
-	end
-
 end
 
+# .sample = rancdom 
+
+
+new_santas = [ ]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trans gender"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Hobbit"]
+40.times do |i|
+    i = Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+
+
+
+# new_santas.each do |call|
+#     call.eat_milk_and_cookies("sugar")
+#     call.reindeer_ranking
+#     call.age(12)
+#     call.celebrate_birthday
+# end
+
+
+
+
+# getter methods making public data outside the class
+
+	# def gender
+	# 	@gender 
+	# end
+	
+
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 # # DRIVER CODE 1
 # Christmas = Santa.new
@@ -105,10 +123,6 @@ end
 
 # DRIVER CODE 4
 # gender = ["Female", "Female", "Female", "Female"]
-
-# # we make an empty container for our puppy collection
-# santas = []
-
 # puts "Iterating through genders to create a quartet of women santas ..."
 
 # gender.each do |g|
@@ -118,15 +132,16 @@ end
 #   puts "----"
 # end
 
-# puts "Testing each Santa instance in the array to make sure it can speak ..."
-# Santas.each do |s|
-#   Santa.speak
-# end
-
-christmas = Santa.new("male","Italian")
-christmas.eat_milk_and_cookies("sugar")
-christmas.speak
-christmas.reindeer_ranking
-christmas.age(12)
-christmas.celebrate_birthday
+# DRIVER CODE 5
+# christmas = Santa.new("male","Italian")
+# christmas.eat_milk_and_cookies("sugar")
+# christmas.speak
+# christmas.reindeer_ranking
+# christmas.age(12)
+# christmas.celebrate_birthday
 # christmas.get_mad_at("Vixen")
+
+
+
+
+
