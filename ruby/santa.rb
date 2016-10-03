@@ -41,15 +41,15 @@ class Santa
 	end 
 
 	def random_age
-		@age = rand(0..40)
+		@age = rand(0..140)
 		puts "Santa is now #{@age}."
 	end
 
 	def get_mad_at(reindeer_name)
 		@reindeer_name = reindeer_name
 		reindeer_array = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		mad_array = reindeer_array.insert(-1, reindeer_name)
-		puts "Santa is made the new order is #{mad_array}."
+		reindeer_array.insert(-1, reindeer_name)
+		puts "Santa is mad the new reindeer order is #{reindeer_array}."
 	end
 
 
@@ -59,7 +59,7 @@ end
 i = [ ]
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trans gender"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Hobbit"]
-10.times do |i|
+23.times do |i|
     i = Santa.new(example_genders.sample, example_ethnicities.sample)   
 i.eat_milk_and_cookies("sugar")
 i.speak
@@ -73,7 +73,7 @@ end
 
 
 
-
+###
 
 
 
@@ -83,9 +83,6 @@ end
 #     call.age(12)
 #     call.celebrate_birthday
 # end
-
-
-
 
 # getter methods making public data outside the class
 
