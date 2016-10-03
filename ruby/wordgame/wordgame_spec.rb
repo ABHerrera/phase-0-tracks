@@ -1,12 +1,32 @@
 
 # Create ‘class WordGame’
+  
+require_relative 'wordgame'
 
 # Enter word to be guessed
   # get word
-  # store word
+  # split word into array so it can be compared to letters guessed
 
-# Person guesses a letter and sees if the letter is in the word
-   # get person guessing the word to input letter
+describe WordGame do
+  let(:wordgame) { WordGame.new(["example"]) }
+
+  it "stores the word given on initialization" do 
+    expect(wordgame.get_word).to eq ["example"]
+  end
+
+# it "pushes guessed letters into an array" do
+
+  it "adds a guessed letter to an array" do
+    expect(wordgame.letter_array).to eq ["a"]
+  end
+
+
+
+# Get letter guessed 
+# and sees if the letter is in the word
+#   it "has person guess letter and checks for letter in word" do
+#     expect(wordgame.guess_letter.include?("a")).to eq "true" or "false"
+#   end
    # store the letter
    # see if word includes guessed letter 
 
@@ -25,18 +45,4 @@
 # The user should get a congratulatory message if they win, and a taunting message if they lose
    # if user guesses the word they get a happy message
    # if user runs out of guesses they get a taunting loser message
-
-
-require_relative 'wordgame'
-
-describe WordGame do
-  let(:wordgame) { WordGame.new }
-
-  it "stores the word given on initialization" do
-  word = [ ]
-  expect(word.push(WordGame.new 'example1'))
-  end
-
-
 end
-
