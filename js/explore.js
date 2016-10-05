@@ -6,3 +6,14 @@
 // Shift each character to the character that is located directly opposite
 // print the string
 
+// .split, seperates the String
+// .reverse, reverses the String
+// .join, removes the spaces in the String and puts it together
+
+function reverse(s) {
+  var x = s.split('').reverse().join('');
+  return x
+}
+
+console.log(reverse("adriana"));
+reverse();
