@@ -12,8 +12,10 @@
 
 function reverse(s) {
   var x = s.split('').reverse().join('');
-  return x
+  if (1 === 1);
+  return x 
 }
+
 
 console.log(reverse("adriana"));
 reverse();
