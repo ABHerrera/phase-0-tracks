@@ -13,3 +13,16 @@ names.forEach(function(value, index) {
 });
 
 console.log(horses);
+
+function Car(color, type, isGoodCar) {
+
+	this.color = color; 
+	this.type = type;
+	this.isGoodCar = isGoodCar;
+
+	this.honk = function() { console.log("Honk Honk!"); };
+	console.log("CAR INITIALIZATION COMPLETE");
+}
+
+var newCar = new Car("blue","sport car",true);
+newCar.honk();
