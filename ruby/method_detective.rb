@@ -10,6 +10,9 @@
 "zom".squeeze
 # => “zoom”
 
+"zom".insert(1,"o")
+# => “zoom”
+
 "enhance".center(20)
 # => "    enhance    "
 
@@ -28,11 +31,14 @@
 # => "The case of the disappearing last lette"
 # .chop also works 
 
+"The case of the disappearing last letter".chop ('r')
 
-"The mystery of the missing first letter".slice!(0)
+"The mystery of the missing first letter".delete "T"
 # => "he mystery of the missing first letter"
 
-"Elementary,    my   dear        Watson!".lstrip
+"The mystery of the missing first letter".gsub "T", " "
+
+"Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
 "z".each_byte
