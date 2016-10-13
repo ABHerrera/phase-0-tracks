@@ -7,35 +7,35 @@ closet = {
 			"cap sleeve",
 			"midi dress",
 			"three quarter sleeve"
-		]
+		],
 		casual: [
-			"sundress"
-			"baby doll"
+			"sundress",
+			"baby doll",
 			"t-shirt dress"
 		],
 		cocktail: [
-			""
+			"mini dress",
+			"bodycon dress",
+			"strapless dress",
+			"spaghetti strap dress",
+			"slip dress"
 		]
-
 		},
 	skirts: {
 		work: [
 			"pencil skirts",
 			"midi"
-		]
+		],
 		casual: [
-			"a-line"
-		]
+			"a-line",
+		],
 		cocktail: [
 			"leather",
 			"mini",
 			"bodycon"
 		]
 
-	}
-
-
-
+	},
 	outerwear: { 
 		spring: [
 			"light sweaters",
@@ -58,8 +58,22 @@ closet = {
 
 
 
+p closet
+p closet[:dresses]
+p closet[:dresses][:cocktail]
+p closet[:dresses][:cocktail][1]
+
+p closet[:outerwear][:winter]
+p closet[:outerwear][:summer]
+p closet[:outerwear][:summer].push("Sweater")
+
+p closet.each_key { |key| puts key}
+p closet.each_value {|value| puts value}
 
 
+
+
+# ---------------------------
 
 
 
