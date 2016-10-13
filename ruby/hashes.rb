@@ -70,7 +70,7 @@ if answer != "none"
         new_info = gets.chomp.to_i
     elsif answer == :number_of_chidren
         new_info = gets.chomp.to_i
-    else
+    elses
         new_info = gets.chomp
     end
     designer_intake[answer] = new_info
