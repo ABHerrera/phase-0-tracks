@@ -1,35 +1,111 @@
-test = ["adriana", "paul"]
-2.times { |test| puts "adriana meets #{test}"}
+beatles = ["John", "Paul", "Ringo", "George"]
+members = beatles.length 
+members.times { |names| puts "#{beatles[names]} is a member of the beatles"}
+Release 0
+def beatles
+	names1 = "John"
+	names2 = "Paul"
+	names3 = "Ringo"
+	names4 = "George"
+	puts "Legends of music"
+	yield(names1, names2, names3, names4)
+end
 
-# 1. Declare an array 
-# 2. populate each of them with data
-# 3. declare a hash
+beatles { |names1, names2, names3, names4 | puts "#{names1}, #{names2}, #{names3}, and #{names4} are members of the beatles" }
 
-letters = ["a", "b", "c", "d"]
+# Release 1
+beatles = ["John", "Paul", "Ringo", "George"]
 
-letters_hash = {1=> 'one', 2 => 'two', 3 => 'three'}
+band_info = {
+	John: 40,
+	Paul: 74,
+	Ringo: 75,
+	George: 58,
+}
 
-["a", "b", "c", "d"].each {|b| puts "hello alphabet #{b}"}
+p band_info
 
-[letters].map {|letters| puts "hello alpha #{letters}"}
-[letters].map! {|letters| puts "hello alpha #{letters}"}
+.each 
 
-# ============= RELEASE 2 ==========================
-arr = [1,2,3,4,5,6,7]
-arr_hash = {1=> 'one', 2 => 'two', 3 => 'three', 4=> 'four', 5 => 'five', 6 => 'six', 7 => 'seven'}
+beatles.each do |beatles|
+	beatles = beatles.next
+	puts beatles
+end
 
-arr.delete_if { |a| a < 4 }
-arr_hash.delete(5) {|test| puts "#{test} not found"}
-#q: tyler: how do we print this to check?
+
+swapcase_beatles = beatles.map do |beatles|
+	puts beatles
+	beatles.swapcase
+end
+
+p swapcase_beatles
+
+.map! 
+
+beatles.map! do |beatles|
+	puts beatles
+	beatles.upcase
+end
+
+p beatles
+
+# Release 2
+
+array_of_seasons = [ "fall", "winter", "spring", "summer"]
+
+numbers_hash = {
+	one: 1, 
+	twenty_two: 22, 
+	three: 3, 
+	fourteen: 14, 
+	five: 5, 
+	ten: 10, 
+}
+
+hash_of_seasons = {
+	fall: "breezy",
+	winter: "very cold",
+	spring: "crisp", 
+	summer: "hot",
+}
+numbers = [ 1, 22, 3, 14, 5, 10 ]
+
+
+
+numbers.delete_if {|number| number < 9 } 
+
+p numbers
+puts "These are the numbers that are greaters than 10 #{numbers}."
+
+hash_of_seasons.delete_if { |word, integer| word.length < 5 }
+p hash_of_seasons
+puts "These are the seasons longer than five characters #{hash_of_seasons}."
+
+
+array = [23, 44, 65, 76, 98]
+def integer_size (array)
+  array.drop_while{|arr| arr < 50}
+end
+p integer_size(array)
+def integer_size(array)
+  array.keep_if {|num| num > 30}
+end
+p integer_size(array)
+                                   
 
 arr.select {|num| num.even? }
 arr_hash.select {|k,v| v > 3 }
-#q: tyler: why does this fail? hash fail?
+
 
 arr.sort { |x,y| y<=> x }
-#q: tyler: why do we need both x and y
-arr_hash.key(3)   #=> "b"
+arr_hash.key(3)
 
 arr.cycle(3) {|x| puts x }
 arr.drop_while {|i| i < 3 }
-#couldnt find a working solution for hash.
+
+
+
+
+
+
+
