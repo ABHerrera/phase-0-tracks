@@ -1,37 +1,48 @@
+# Make a mixin version of the Shout module
+# Write two classes representing anything that might shout
+# Include the Shout module in those classes
+# Test work by adding Driver Code that instanitiate instances of your class and
+    # call the two module methods on each instance
+
+module Yell
+  def yell_something(phrase)
+    puts "Whoa! Who is yelling '#{phrase.upcase}'?"
+  end
+end
+
+class Happy_Yelling
+	include Yell
+end
+
+class Mad_Yelling
+	include Yell
+end
+
+
+loud = Happy_Yelling.new
+loud.yell_something("Yippie!!!")
+
+loud = Mad_Yelling.new
+loud.yell_something("I won't vote for Donald Trump!")
+
+
+
+
+# # DO THE THING
+# # Declare your module
+
 # module Shout
-# 	# we'll put some methods here soon, but this code is fine for now!
-# 	def self.yell_angrily(words)
-# 		words + "!!!" + " :("
-# 	end
 
-# 	def self.yelling_happily(words)
-# 		words + "!!!" + " :)"
-# 	end
-# end 
+#   def self.yell_angrily(words)
+#     words + "!!!" + " :("
+#   end
 
-# puts Shout::yell_angrily("yo")
-# puts Shout::yelling_happily("momma")
+#   def self.yelling_happily(words)
+#   	words + "!!!!!!!" + ":)"
+#   end
 
+# end
 
-module Shout
-	def yell(person, words)
-		puts "The #{person} is yelling '#{words}!!!'. How rude."
-	end
-end
+# puts Shout::yell_angrily("WHAT ARE YOU DOING")
+# puts Shout::yelling_happily("YIPPPEE")
 
-class Child
-	include Shout
-end
-
-class Old_Man
-	include Shout
-end
-
-child = Child.new
-child.yell("child", "I WANT SOME ICE CREAM")
-
-old_man = Old_Man.new
-old_man.yell("old man", "YOU WHIPPER SNAPPER")
-
-
-#
