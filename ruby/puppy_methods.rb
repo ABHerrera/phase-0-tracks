@@ -1,66 +1,76 @@
-# 6.2. Pairing with Erik Bonn
+
+# Pairing with Andy Buckmann
 
 class Puppy
+  def initialize
+    puts "initialzes new puppy instance"
+  end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
-  def speak(int)
-    puts "Woof!" * int
+
+  def speak(integer)
+    puts "Woof " * integer    
   end
-  def rollover
+
+  def roll_over
     puts "*rolls over*"
   end
-  def dog_years(int1)
-    puts "your dog age is #{int1 * 7}"
+
+  def dog_years(integer)
+    p integer * 7
   end
-  def gainer(num)
-    puts "He just did like #{num} gainers in a row bro!"
+
+  def shake
+    puts "*sticks out paw*"
   end
-  
+
+end
+
+class Cat
+
+#initialize
   def initialize
-    puts "Initializing new puppy instance ..."
+    puts "initialzing cat"
+  end
+#method say meow
+  def meow
+    puts "meow"
+  end
+
+#chase whatever animal
+  def chase(animal)
+    puts "cat chases #{animal}"
   end
 end
-#initailized a new instance of Puppy and added driver code/UI to demonstrate methods.
-max = Puppy.new
-puts "what toy do you want him to fetch?"
-    toy = gets.chomp
-max.fetch(toy)
-puts "say a number and the dog will bark that many times and he'll roll over too."
-    int = gets.to_i
-max.speak(int)
-max.rollover
-puts "enter your age and we'll convert it to dog years"
-    int1 = gets.to_i
-max.dog_years(int1)
-puts "Enter how many gainers do you want him to do!"
-    num = gets.to_i
-max.gainer(num)
-puts "*" * 30
 
 
-class Zombie
-    def initialize
-         puts "Initializing new zombie instance ..."
-    end
-    def stumble_walk
-        puts "That zombie is creepily stumble-walking towards me!"
-    end
-    def attack
-        puts "help! this zombie is attacking me!"
-    end
-    def voice
-        puts "ARRRRGGH!!!" 
-    end
-end
-instances_arr = []
+dog = Puppy.new
+dog.fetch("ball")
+dog.speak(3)
+dog.roll_over
+dog.dog_years(4)
+dog.shake
+
+kitty = Cat.new
+kitty.meow
+kitty.chase("mouse")
+
+#use loop to make 50 instances
+
+cats = []
+
+
 50.times do |i|
-    i = Zombie.new
-    instances_arr << i
+  i = Cat.new
+  cats << i
 end
-instances_arr.each do |call|
-    call.stumble_walk
-    call.attack
-    call.voice
+
+p cats
+
+cats.each do |cat| 
+  cat.meow
+  cat.chase("bird")
 end
