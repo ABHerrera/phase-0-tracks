@@ -1,26 +1,27 @@
 class TodoList
 
-	def initialize(list)
-		@list = list
+	def initialize(chores)
+		@chores = chores
 	end
 
 	def get_items
-		@list
+		@chores
 	end
 
 	def add_item(item)
-		@list.push(item)
+		get_items.push(item)
 	end
 
 	def delete_item(item)
-		@list.delete(item)
+		# index = get_items.index(item)
+		# get_items.delete_at(index)
+		get_items.delete(item)
 	end
 
-	def get_item(index_number)
-		@list[index_number]
+	def get_item(index)
+		@chores[index]
 	end
+
+
 end
-
-
-
 
