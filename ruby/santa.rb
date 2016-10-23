@@ -1,3 +1,5 @@
+# PESUDOCODE 
+
 # define a Santa class
 
 # add three instance methods:
@@ -22,15 +24,35 @@
 	# The method age should simply return @age.
 	# The method ethnicity should return @ethnicity.
 
+# Refactor code using attr_reader and attr_accessor
+
+# Create a lot of Santas
+	# Use our array of example genders and an array of example ethnicities
+	# Create your Santas with a randomly selected gender and a randomly selected ethnicity. 
+
+# Set your new Santa's age to a random number between 0 and 140.
+
+# No need to store your Santas in a data structure, 
+    # but your program should print out the attributes of each Santa using the instance methods that give you access to that data.
+
+
+# NOTES ---
+# attr_writer is not common which makes something writeable but not readable 
+# ----
 
 
 class Santa
+	attr_reader  :age, :reindeer_ranking
+	attr_accessor :gender, :ethnicity
+
+
+
 	def initialize(gender,ethnicity)
 		puts "Initializing Santa instance ..."
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = age
+		@age = 0
 	end
 
 	def speak
@@ -41,6 +63,18 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!" 
 	end 
 
+	# def gender
+	# 	@gender
+	# end
+
+	# def age
+	# 	@age 
+	# end 
+
+	def random_age
+		@age = rand(0...140)
+	end 
+
 	def celebrate_birthday
 		celebrate_birthday = @age + 1
 	end
@@ -48,40 +82,61 @@ class Santa
 	def get_mad_at(reindeer_name)
 		# what is the index of the reindeer?
 		# move the reindeer to -1 index
-		# make new array
 
-		get_mad_at = []
-		# get_mad_at = @reindeer_ranking.index(reindeer_name)
-		get_mad_at << @reindeer_ranking[@reindeer_ranking(reindeer_name)[-1]]
+		index = @reindeer_ranking.index(reindeer_name)
+		@reindeer_ranking.insert(-1,@reindeer_ranking.delete_at(index))
 	end
 
 
 # setter method, make something writable
    # sets attribute from outside the class
    # have '=' in them
-   
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+   # syntatic sugar for setter method is called attr_accessor (which allows for reading and writing)
+
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
 
 # attributes that are readable are getter methods, wrap around a piece of data and return the data
    # getter methods make private data outsode of the class
-
-	def age
-		@age 
-	end 
-
-	def ethnicity
-		@ethnicity
-	end
+   # syntatic sugar for getter is called attr_reader
+	
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 end
 
 
+# DRIVER CODE 6
 
+gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+
+# make santas X amount of times
+
+
+23.times do 
+	santas = Santa.new(gender.sample,ethnicity.sample)
+	puts "Santa is now #{santas.gender} and #{santas.ethnicity}"
+	puts "Santa is now #{santas.random_age}."
+
+end
 
 
 # DRIVER CODE 5
+# santa = Santa.new("woman", "black")
+# santa.speak
+# santa.eat_milk_and_cookies("sugar")
+# santa.age
+# santa.celebrate_birthday
+# p santa.celebrate_birthday
+# santa.get_mad_at("Dasher")
+# p santa.get_mad_at("Dasher")
+
+# santa.gender = "big man"
+# puts "Santa is now a #{santa.gender}."
 
 
 
