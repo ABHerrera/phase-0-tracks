@@ -1,32 +1,52 @@
-var colors = ["Blue", "Pink", "Yellow", "Red"];
-var names = ["Hyejin", "Adriana", "Tyler", "John"];
+var colors = ["green", "yellow", "pink", "black"];
+var names = ["Joey", "Chandler", "Rachel", "Phoebe"];
 
-colors.push("Purple");
-names.push("James");
+console.log(colors);
+console.log(names);
+
+colors.push("purple");
+names.push("Monica");
+
+console.log(colors);
+console.log(names);
+
+var horses ={}
+
+for (var i = 0; i < names.length; i++){
+	horses[names[i]] = colors[i];
+}
+
+console.log(horses)
+
+//
 
 
-var horses = {}
-names.forEach(function(value, index) {
+function Car(type, color, fast) {
+	console.log("Our new car:", this);
 
-  horses[value] = colors[index];
-
-});
-
-console.log(horses);
-
-function Car(color, type, isGoodCar) {
-
-	this.color = color; 
 	this.type = type;
-	this.isGoodCar = isGoodCar;
+	this.color = color;
+	this.fast = fast;
 
-	this.honk = function() { console.log("Honk Honk!"); };
+	this.honk = function() { console.log("HONK!"); };
+	
 	console.log("CAR INITIALIZATION COMPLETE");
 }
 
-var newCar = new Car("blue","sport car",true);
-newCar.honk();
+console.log("Let's build a car ...");
 
+var anotherCar = new Car("Volvo", "red", false);
+console.log(anotherCar)
+console.log("Our car can honk:");
+anotherCar.honk();
+console.log("----");
+
+console.log("Let's build another car ...");
+var yetAnotherCar = new Car("Lamborgini", "black", true);
+console.log(yetAnotherCar.type);
+console.log("This new car can honk, too:");
+yetAnotherCar.honk();
+console.log("----")
 
 
 // How to loop through keys and values Syntax:
@@ -52,3 +72,4 @@ newCar.honk();
 // Using a constructor is more concise and more conventional than instantiating a generic object first and tacking on properties.
 
 // Source: http://stackoverflow.com/questions/6294281/what-advantages-are-gained-by-using-constructors-in-javascript
+
