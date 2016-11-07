@@ -1,0 +1,25 @@
+1.) Display the information in one table (either table is fine).
+
+ 	SQL query: 
+ 	SELECT * FROM food_critic;
+
+ 	OUTPUT: 
+ 	1|Bob Eatsalot|true|Food and Wine Magazine|1
+	2|Reba Yum|true|The New York Post|1
+	3|Mario Batti|false|The Food Network|2
+	4|Aaron Arroz|true|The Los Angeles Times|1
+	5|Dani Peas|true|Self Magazine|1
+
+2.) Update an item that meets some condition (you can choose a condition that makes sense).
+
+
+	SQL query: 
+	UPDATE food_critic SET new_patron="false" WHERE name="Aaron Arroz";
+
+	OUTPUT:
+	1|Bob Eatsalot|true|Food and Wine Magazine|1
+	2|Reba Yum|true|The New York Post|1
+	3|Mario Batti|false|The Food Network|2
+	4|Aaron Arroz|false|The Los Angeles Times|1
+	5|Dani Peas|true|Self Magazine|1
+
