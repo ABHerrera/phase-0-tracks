@@ -24,8 +24,8 @@ class Gratitude
 	end 
 
 	def print_gratitude
-		"Here are the things you are grateful for to date:"
-		@daily_reflection.each_pair { |k, v| puts "Date: #{k}, Grateful for: #{v}" }
+		puts "Here are the things you are grateful for to date:"
+		puts @daily_reflection.each_pair { |k, v| puts "Date: #{k}, Grateful for: #{v}" }
 	end 
 
 

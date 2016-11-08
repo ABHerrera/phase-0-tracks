@@ -18,13 +18,22 @@ SQL
 db.execute(create_table_cmd)
 
 # add a test gratitude
-db.execute("INSERT INTO daily_gratitude(creation_date, grateful_for) VALUES ('10/06/16', 'Relaxing Sundays')")
+# db.execute("INSERT INTO daily_gratitude(creation_date, grateful_for) VALUES ('10/06/16', 'Relaxing Sundays')")
+
+def insert_gratitude(db, creation_date, grateful_for)
+	db.execute("INSERT INTO daily_gratitude(creation_date, grateful_for) VALUES (?, ?)", [creation_date, grateful_for])
+end
+
+
 
 
 
 
 # # explore ORM by retrieving data
 # daily_gratitude = db.execute("SELECT * FROM daily_gratitude")
+# puts daily_gratitude.class
+# p daily_gratitude
+
 # daily_gratitude.each do |gratitude|
 #  puts "#{gratitude['creation_date']} is #{gratitude['grateful_for']}"
 # end
