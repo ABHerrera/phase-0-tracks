@@ -24,4 +24,10 @@ post '/students' do
   redirect '/'
 end
 
+post '/student_tip' do
+  db.execute("INSERT INTO students (name, happy_tip) VALUES (?,?,?)", [params['name'], params['happy_tip'])
+  redirect '/'
+end
+
+
 # add static resources
