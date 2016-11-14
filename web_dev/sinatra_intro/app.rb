@@ -73,6 +73,34 @@ end
 
 
 
+# RESEARCH ON YOUR OWN
+# 1.) Is Sinatra the only web app library in Ruby? What are some others?
+   # Rack 'n' Alternative
+   # Ruby on Rails
+   # Volt
+   # Async Web (Socket) Framework
+   # Web Service Frameworks
+   # Micro Frameworks: 
+     # Rum 
+     # Cuba
+     # Roda
+     # Hobbit
+     # Brooklyn
+     # Nancy
+     # Camping
+     # Scorched 
+   # Full-stack Frameworks: 
+     # Lotus
+     # Pakyow
+     # Ramaze
+
+# 2.) Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+  # Sinatra is database agnostic and can be used with many options like MongoDB and Active Record
+
+# 3.) What is meant by the term web stack?
+  # Web stack refers to the Web technologies used to create an application/ project. 
+  # A Web stack consists of an operating system, programmining language, database software, and Web server.
+
 
 
 
