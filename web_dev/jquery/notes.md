@@ -1,5 +1,5 @@
 <!-- PLAN TO LEARN JQUERY 
-* Reserach JQUERY TOOLS
+* Research JQUERY TOOLS
   * Look at CodeAcademy and other similar learning platforms
   * See which learning platforms makes the most sense for me
   * Check out YouTube for videos
