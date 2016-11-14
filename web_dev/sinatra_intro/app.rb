@@ -67,9 +67,8 @@ end
   # data need to be (or arrive as) a string?
 
 get '/:number_1/add_to/:number_2' do
-  added_number = {params[:number_1]} + {params[:number_2]}
+  added_number = params[:number_1].to_i + params[:number_2].to_i
   "The total is #{added_number}"
-  end
 end
 
 
