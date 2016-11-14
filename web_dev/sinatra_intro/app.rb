@@ -50,5 +50,31 @@ get '/address' do
   "123 Unicorn Lane <br> Fairy City, CA 88888"
 end
 
+# A /great_job route
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+
+# A route that uses route parameters 
+  # to add two numbers and respond with the result.
+  # The data types are tricky here -- when will the 
+  # data need to be (or arrive as) a string?
+
+get '/:number_1/add_to/:number_2' do
+  added_number = {params[:number_1]} + {params[:number_2]}
+  "The total is #{added_number}"
+  end
+end
+
+
+
+
+
 
 
