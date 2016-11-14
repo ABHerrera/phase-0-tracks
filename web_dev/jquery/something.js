@@ -4,3 +4,4 @@ $(document).ready(function(){
     });
 });
 
+// Not sure if this is what the assignment is asking for. Used research to build a window that appears on exit on a previous assignment's code. 
